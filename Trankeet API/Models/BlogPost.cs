@@ -12,6 +12,6 @@ namespace Trankeet_API.Models
         public string Category { get; set; }
         public string Tag { get; set; }
         public User Author { get; set; }
-        public ICollection<Comment> Comments { get; set; }
+        public ICollection<PostComment> Comments { get; set; }
     }
 }

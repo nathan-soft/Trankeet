@@ -1,6 +1,6 @@
 ﻿namespace Trankeet_API.Models
 {
-    public class Comment
+    public class PostComment
     {
         public int CommentID { get; set; }
         public int PostID { get; set; }
