@@ -1,0 +1,18 @@
+﻿.mentor-filter-box {
+    min-width: 15rem;
+    max-width: 15rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: .7rem;
+    background-color: #fff;
+}
+
+.ratings-filter img {
+    min-width: 6rem;
+}
+
+@media screen and (max-width: 1180px){
+    .mentor-filter-box {
+        display: none;
+    }
+}

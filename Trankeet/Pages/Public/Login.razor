@@ -1,4 +1,32 @@
-﻿<h3>Login</h3>
+﻿@page "/"
+@page "/Public/Login"
+
+<PageTitle>Login</PageTitle>
+
+<div class="form-box shadow bg-white">
+    <h5 class="mb-3">Welcome Back!</h5>
+    <form>
+        <div class="mb-2">
+            <label class="control-label" for="Email">Email Address</label>
+            <input class="form-control" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" value="">
+            <span class="text-danger small field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+        </div>
+        <div class="mb-2">
+            <label class="control-label" for="Password">Password</label>
+            <input class="form-control" type="password" data-val="true" data-val-required="The Password field is required." id="Password" name="Password">
+            <span class="text-danger small field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+        </div>
+        <div class="mb-3">
+            <NavLink class="text-primary" href="/Public/ForgotPassword">Forgot password?</NavLink>
+        </div>
+        <div class="mb-2 d-flex">
+            <button type="submit" class="btn flex-fill fw-bold btn-dark">Login</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <NavLink class="text-dark fw-bold" href="/Public/Register">Create New Account</NavLink>
+        </div>
+    </form>
+</div>
 
 @code {
 

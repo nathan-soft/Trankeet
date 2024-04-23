@@ -1,0 +1,31 @@
+﻿@using TrankeetWeb.Pages.Components
+@inherits LayoutComponentBase
+
+@inject NavigationManager navigationManager
+<HeadContent>
+    <style>
+        body{
+            min-height: 100svh;
+            background-color: black;
+            background-image: url('images/background_2.jpg');
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+        }
+    </style>
+</HeadContent>
+
+<TopNav />
+<main class="d-njone">
+    @if (navigationManager.Uri.Contains("/Mentors"))
+    {
+        <MentorsPageSideNav />
+    }
+
+    @Body
+</main>
+ 
+
+
+
+

@@ -1,0 +1,28 @@
+﻿<nav class="navbar navbar-expand-md fixed-top bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">Trankeet</a>
+        <button class="btn d-block d-md-none nav-btn" type="button">
+            <span>
+                <svg class="menu" width="22" height="22" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="var(--bs-dark)"></path>
+                </svg>
+            </span>
+        </button>
+
+        <div class="navbar-nav d-none d-md-flex">
+            <NavLink class="nav-link" aria-current="page" href="/">Home</NavLink>
+            <a class="nav-link" href="#">Courses</a>
+            <NavLink class="nav-link" href="/Public/Mentors">Mentors</NavLink>
+            <a class="nav-link" href="#">Blog</a>
+        </div>
+
+        <div class="navbar-nav d-none d-md-flex">
+            <NavLink class="nav-link" href="/Public/Login">Sign In</NavLink>
+            <NavLink class="nav-link" href="/Public/Register">Sign Up</NavLink>
+        </div>
+    </div>
+</nav>
+
+@code {
+
+}

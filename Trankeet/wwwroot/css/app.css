@@ -1,5 +1,21 @@
+:root {
+    --side-bar-width: 220px;
+    --text-color: #212529d6;
+}
+
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+    font-family: "Rubik", sans-serif;
+    color: var(--text-color);
+}
+
+.form-control,
+.form-control:focus,
+.form-control:active,
+.form-select,
+.form-select:focus,
+.form-select:active {
+    color: var(--text-color);
 }
 
 h1:focus {

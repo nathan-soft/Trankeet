@@ -1,0 +1,81 @@
+﻿.mentor-card {
+    min-width: 18rem;
+    max-width: 18rem;
+    padding-bottom: 1rem;
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    border-radius: .7rem;
+    background-color: #fff;
+}
+
+    .mentor-card:hover {
+        box-shadow: 0 0 12px 0 rgba(0,0,0,.12);
+        transform: scale(1.01);
+    }
+
+.mentor-card__img-wrapper {
+    border-radius: .6rem;
+    width: 100%;
+    min-height: 16.5rem;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.mentor-card__info{
+    display: flex;
+    flex-direction:column;
+    gap: .5rem;
+    padding-block: 1rem;
+}
+
+    .mentor-card__info p,
+    .mentor-card__info h6 {
+        margin-bottom: 0;
+    }
+
+    .mentor-card__info h6 {
+        color: #666666;
+        font-size: .73rem;
+    }
+
+    .mentor-card__info p,
+    .mentor-card__info span {
+        color: #2D2D2D;
+    }
+
+.mentor-card__info__experience p{
+    font-size: .8rem;
+    font-weight: 450;
+}
+
+.mentor-card__info__experties div {
+    margin-top: .3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+}
+
+.mentor-experties {
+    border: 1px solid #2D2D2D;
+    border-radius: 1.5rem;
+    padding: .35rem 1rem;
+    font-size: .7rem;
+    line-height: .7rem;
+}
+
+.mentor-card__info__ratings img{
+    min-width: 6rem;
+}
+
+.mentor-card__info__ratings span {
+    font-size: .7rem;
+}
+
+
+
+@media screen and (max-width: 1180px) {
+    .mentors-wrapper {
+        flex-grow: 1
+    }
+}

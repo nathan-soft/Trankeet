@@ -1,0 +1,23 @@
+﻿main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5.357rem;
+    padding-bottom: 3rem;
+    min-height: calc(100svh - 0px);
+    min-width: 100%;
+}
+
+::deep .form-box {
+    width: 23rem;
+    padding-inline: 1rem;
+    padding-block: 1.5rem;
+    border-radius: 1rem;
+}
+
+
+@media screen and (max-width: 424px){
+    ::deep .form-box {
+        width: 87%;
+    }
+}
