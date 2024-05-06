@@ -1,6 +1,9 @@
 :root {
     --side-bar-width: 220px;
     --text-color: #212529d6;
+    --dark-accent: #002d2b;
+    --accent: #e4fffe;
+    --btn-primary-hover: #053B39;
 }
 
 html, body {
@@ -8,6 +11,35 @@ html, body {
     font-family: "Rubik", sans-serif;
     color: var(--text-color);
 }
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.closebtn {
+    display: none;
+    position: absolute;
+    top: -5px;
+    direction: ltr;
+    right: 1.1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+    .closebtn:hover,
+    .closebtn:active,
+    .closebtn:visited {
+        text-decoration: none;
+        color: var(--text-color);
+    }
 
 .form-control,
 .form-control:focus,

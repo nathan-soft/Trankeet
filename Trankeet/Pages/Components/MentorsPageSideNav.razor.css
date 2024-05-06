@@ -11,7 +11,13 @@
     min-width: 6rem;
 }
 
-@media screen and (max-width: 1180px){
+label span,
+label small
+{
+    font-size: .8rem;
+}
+
+@media screen and (max-width: 991px){
     .mentor-filter-box {
         display: none;
     }

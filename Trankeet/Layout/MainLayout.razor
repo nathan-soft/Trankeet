@@ -1,16 +1,73 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
+@using TrankeetWeb.Pages.Components
+
+@inject IJSRuntime jsRuntime
+
+<HeadContent>
+    <style>
+        body {
+            background-color: #fafafa;
+            color: var(--text-color);
+        }
+    </style>
+</HeadContent>
+
+<InnerSideNav />
+<div class="main-wrapper">
+        <nav class="top-nav py-3 d-flex bg-white justify-content-between align-items-center shadow-sm">
+            <section class="d-flex gap-2">
+                <img id="nav-menu-button" class="img-fluid" src="/images/menu-icon.svg" alt="Navigation Menu" />
+                <h5 class="page-title mb-0">@Title</h5>
+            </section>
+            
+            <div class="hdh d-flex justify-content-center align-items-center gap-2">
+                <i class="fa fa-bell-o"></i>
+                <div class="d-flex align-items-center gap-2">
+                    @* <p class="mb-0">Hello, @User.GetFirstName()</p>
+                    <div class="profile-img-wrapper">@User.GetInitials()</div> *@
+                    <p class="mb-0">Hello, Nate</p>
+                    <div class="profile-img-wrapper">NO</div>
+                </div>
+            </div>
+        </nav>
+        <main role="main" class="py-5">
+            @Body
+        </main>
+
+        <footer class="border-top footer text-muted">
+            <p class="mb-0">
+                &copy; @DateTime.Today.Year - Trankeet
+            </p>
+        </footer>
+
+        @* Delete Modal *@
+        <div class="modal fade alert" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                        <span class="fa fa-times-circle closeModalbtn" data-bs-dismiss="modal"></span>
+                        <h5 class="title font-weight-bold mb-2">Delete Item?</h5>
+                        <p class="content w-75 text-center mb-4">Are you sure you want to delete this menu item?</p>
+                        <section class="buttons-container d-flex gap-1">
+                            <button type="button" class="btn btn-primary me-1">Confirm</button>
+                            <button type="button" class="btn btn-outline-primary ml-1" data-bs-dismiss="modal">Cancel</button>
+                        </section>
+                        <div class="d-none mt-2">
+                            <input id="itemToDeleteId" type="number" class="form-control" readonly />
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+@code{
+    public string Title = "";
+    
+    private async Task GetTitle()
+    {
+        Title = await jsRuntime.InvokeAsync<string>("getTitle");
+    }
+}

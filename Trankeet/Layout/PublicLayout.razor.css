@@ -16,6 +16,13 @@
 }
 
 
+@media screen and (max-width: 991px) {
+    main {
+        flex-direction: column;
+        align-items: center!important;
+    }
+}
+
 @media screen and (max-width: 424px){
     ::deep .form-box {
         width: 87%;

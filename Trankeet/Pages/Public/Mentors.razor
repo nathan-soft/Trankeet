@@ -16,10 +16,32 @@
             align-items: start !important;
             padding-left: 1rem;
         }
+
+        @@media screen and (max-width: 991px){
+            main {
+                padding-left: 0;
+                justify-content: center !important;
+            }
+
+            @@media screen and (max-width: 767px){
+                main {
+                    padding-inline: 1rem;
+                }
+            }
+
+            @@media screen and (max-width:417px) {
+                main {
+                    padding-inline: 0;
+                }
+            }
+        }
     </style>
 </HeadContent>
-
-<section class="mentors-wrapper d-flex flex-wrap justify-content-center gap-3">
+<section class="search-section d-flex gap-2 mb-3">
+    <span>Filter</span>
+    <input type="search" class="form-control " />
+</section>
+<section class="mentors-wrapper d-flex flex-wrap gap-3">
     <div class="mentor-card">
         <section class="mentor-card__img-wrapper" style="background-image: url('/images/mentor 1.jpg');">
         </section>
@@ -44,6 +66,8 @@
                 <img src="/images/star-rating-2.5.svg" />
                 <span>(12 sessions)</span>
             </div>
+
+            <button class="btn btn-sm w-100 btn-outline-primary d-sm-none">Book Session</button>
         </section>
         <section class="action-center">
             <button class="btn w-100 btn-outline-primary">Book Session</button>
@@ -74,6 +98,8 @@
                 <img src="/images/star-rating-2.5.svg" />
                 <span>(12 sessions)</span>
             </div>
+
+            <button class="btn btn-sm w-100 btn-outline-primary d-sm-none">Book Session</button>
         </section>
         <section class="action-center">
             <button class="btn w-100 btn-outline-primary">Book Session</button>
@@ -103,6 +129,104 @@
                 <img src="/images/star-rating-2.5.svg" />
                 <span>(4 sessions)</span>
             </div>
+
+            <button class="btn btn-sm w-100 btn-outline-primary d-sm-none">Book Session</button>
+        </section>
+        <section class="action-center">
+            <button class="btn w-100 btn-outline-primary">Book Session</button>
+        </section>
+    </div>
+
+    <div class="mentor-card">
+        <section class="mentor-card__img-wrapper" style="background-image: url('/images/mentor 1.jpg');">
+        </section>
+        <section class="mentor-card__info">
+            <div class="mentor-card__info__about d-flex">
+                <h5 class="mb-0">Nathan Recees</h5>
+            </div>
+            <div class="mentor-card__info__experience">
+                <h6 class="mb-0">Experience</h6>
+                <p>6 Years</p>
+            </div>
+            <div class="mentor-card__info__experties">
+                <h6>Expertise</h6>
+                <div>
+                    <span class="mentor-experties">Data Analytics</span>
+                    <span class="mentor-experties">Web Development</span>
+                    <span class="mentor-experties">SQL</span>
+                    <span class="mentor-experties">Artificial Intelligence</span>
+                </div>
+            </div>
+            <div class="mentor-card__info__ratings">
+                <img src="/images/star-rating-2.5.svg" />
+                <span>(12 sessions)</span>
+            </div>
+
+            <button class="btn btn-sm w-100 btn-outline-primary d-sm-none">Book Session</button>
+        </section>
+        <section class="action-center">
+            <button class="btn w-100 btn-outline-primary">Book Session</button>
+        </section>
+    </div>
+
+    <div class="mentor-card">
+        <section class="mentor-card__img-wrapper" style="background-image: url('/images/mentor 3.png');">
+        </section>
+        <section class="mentor-card__info">
+            <div class="mentor-card__info__about d-flex">
+                <h5 class="mb-0">Nathan Recees</h5>
+            </div>
+            <div class="mentor-card__info__experience">
+                <h6 class="mb-0">Experience</h6>
+                <p>6 Years</p>
+            </div>
+            <div class="mentor-card__info__experties">
+                <h6>Expertise</h6>
+                <div>
+                    <span class="mentor-experties">Data Analytics</span>
+                    <span class="mentor-experties">Web Development</span>
+                    <span class="mentor-experties">SQL</span>
+                    <span class="mentor-experties">Artificial Intelligence</span>
+                </div>
+            </div>
+            <div class="mentor-card__info__ratings">
+                <img src="/images/star-rating-2.5.svg" />
+                <span>(4 sessions)</span>
+            </div>
+
+            <button class="btn btn-sm w-100 btn-outline-primary d-sm-none">Book Session</button>
+        </section>
+        <section class="action-center">
+            <button class="btn w-100 btn-outline-primary">Book Session</button>
+        </section>
+    </div>
+
+    <div class="mentor-card">
+        <section class="mentor-card__img-wrapper" style="background-image: url('/images/mentor 2.jpg');">
+        </section>
+        <section class="mentor-card__info">
+            <div class="mentor-card__info__about d-flex">
+                <h5 class="mb-0">Nathan Recees</h5>
+            </div>
+            <div class="mentor-card__info__experience">
+                <h6 class="mb-0">Experience</h6>
+                <p>6 Years</p>
+            </div>
+            <div class="mentor-card__info__experties">
+                <h6>Expertise</h6>
+                <div>
+                    <span class="mentor-experties">Data Analytics</span>
+                    <span class="mentor-experties">Web Development</span>
+                    <span class="mentor-experties">SQL</span>
+                    <span class="mentor-experties">Artificial Intelligence</span>
+                </div>
+            </div>
+            <div class="mentor-card__info__ratings">
+                <img src="/images/star-rating-2.5.svg" />
+                <span>(12 sessions)</span>
+            </div>
+
+            <button class="btn btn-sm w-100 btn-outline-primary d-sm-none">Book Session</button>
         </section>
         <section class="action-center">
             <button class="btn w-100 btn-outline-primary">Book Session</button>

@@ -1,0 +1,44 @@
+﻿.side-nav {
+    position: fixed;
+    min-width: var(--side-bar-width);
+    max-width: var(--side-bar-width);
+    height: 100%;
+    padding-top: 2rem;
+    padding-inline: 1rem;
+    background-color: #ffffff;
+    z-index: 10;
+    transition: all ease-in-out .5s;
+}
+
+    .side-nav .nav-item {
+        padding-inline: 1rem;
+    }
+
+        .side-nav .nav-item.active,
+        .side-nav .nav-item:hover {
+            background-color: #e4fffe;
+            border-radius: .5rem;
+            border-bottom: 2px solid #ffffff;
+        }
+
+            .side-nav .nav-item.active a {
+                font-weight: 500;
+            }
+
+
+@media screen and (max-width: 1011px) {
+    .side-nav {
+        margin-left: calc(var(--side-bar-width) * -1);
+    }
+
+        .side-nav.show {
+            margin-left: 0;
+            left: 0;
+            top: 0;
+        }
+
+    .main-wrapper {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
