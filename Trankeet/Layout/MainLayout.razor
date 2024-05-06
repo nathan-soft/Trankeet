@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @using TrankeetWeb.Pages.Components
+@using Microsoft.AspNetCore.Components.Sections
 
 @inject IJSRuntime jsRuntime
 
@@ -17,7 +18,9 @@
         <nav class="top-nav py-3 d-flex bg-white justify-content-between align-items-center shadow-sm">
             <section class="d-flex gap-2">
                 <img id="nav-menu-button" class="img-fluid" src="/images/menu-icon.svg" alt="Navigation Menu" />
-                <h5 class="page-title mb-0">@Title</h5>
+                <h5 class="page-title mb-0">
+                    <SectionOutlet SectionName="layout-page-title" />
+                </h5>
             </section>
             
             <div class="hdh d-flex justify-content-center align-items-center gap-2">
