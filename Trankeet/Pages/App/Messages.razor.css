@@ -29,3 +29,15 @@ p.text-small.span {
     width: 2.5rem;
     height: 2.5rem;
 }
+
+@media screen and (max-width: 767px) {
+    .chat{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .chat {
+        width: 100%;
+    }
+}
