@@ -6,7 +6,73 @@
 </SectionContent>
 
 
+<section class="d-flex flex-column gap-2">
+    <h5 class="mb-0">Courses</h5>
+    <div class="d-flex gap-3 flex-row flex-nowrap overflow-x-auto">
+        <div class="card flex-shrink-0">
+            <div class="card-body flex-column gap-1 p-3 pb-5">
+                <p class="mb-0 fw-light">Enrolled</p>
+                <h5 class="fw-bold mb-0">8</h5>
+            </div>
+        </div>
+        <div class="card flex-shrink-0">
+            <div class="card-body flex-column gap-1 p-3 pb-5">
+                <p class="mb-0 fw-light">Ongoing</p>
+                <h5 class="fw-bold mb-0">5</h5>
+            </div>
+        </div>
+        <div class="card flex-shrink-0">
+            <div class="card-body flex-column gap-1 p-3 pb-5">
+                <p class="mb-0 fw-light">Completed</p>
+                <h5 class="fw-bold mb-0">3</h5>
+            </div>
+        </div>
+    </div>
+</section>
 
+
+<section class="d-flex flex-column mt-4 gap-2">
+    <h5 class="mb-0">Mentorship</h5>
+
+    <div class="d-flex gap-3">
+        <div class="d-flex flex-column gap-3">
+            <div class="card">
+                <div class="card-body flex-column gap-1 p-3 pb-5">
+                    <p class="mb-0 fw-light">Ongoing</p>
+                    <h5 class="fw-bold mb-0">2</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body p-3 pb-5">
+                    <p class="mb-0 fw-light">Ongoing</p>
+                    <h5 class="fw-bold mb-0">2</h5>
+                </div>
+            </div>
+        </div>
+       <div class="table-responsive bg-white rounded-4 p-4 pb-5">
+           <h5>Mentors</h5>
+           <table class="table">
+               <thead>
+                   <tr>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Status</th>
+                   </tr>
+               </thead>
+               <tbody>
+                    @for(var j = 0; j < 4; j++)
+                    {
+                        <tr>
+                            <td>Omomowo Reliance</td>
+                            <td>Software Development</td>
+                            <td class="text-warning">Ongoing</td>
+                        </tr>
+                    }
+               </tbody>
+           </table>
+       </div>
+    </div>
+</section>
 
 
 @code {
