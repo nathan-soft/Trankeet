@@ -1,13 +1,12 @@
-﻿@using TrankeetWeb.Pages.Mentees
-@inject NavigationManager NavigationManager;
+﻿@inject NavigationManager NavigationManager;
 
 <ul class="nav rounded-3 bg-white px-4 flex-nowrap overflow-auto gap-1 pt-3">
-    <li class="nav-item sub-nav @(IsBasicInfoActive ? "active" : "") flex-shrink-0">
+    <li class="nav-item sub-nav @(_uri.Contains("/BasicInfo") ? "active" : "") flex-shrink-0">
         <NavLink class="nav-link pt-0 pb-3 text-dark" Match="NavLinkMatch.All" href="/App/Settings/BasicInfo">
             Basic Info
         </NavLink>
     </li>
-    <li class="nav-item sub-nav @(IsChangePasswordActive ? "active" : "") flex-shrink-0">
+    <li class="nav-item sub-nav @(_uri.Contains("/ChangePassword") ? "active" : "") flex-shrink-0">
         <NavLink class="nav-link pt-0 pb-3 text-dark" Match="NavLinkMatch.All" href="/App/Settings/ChangePassword">
             Change Password
         </NavLink>
@@ -18,16 +17,11 @@
 
 
 @code {
-    bool IsBasicInfoActive { get; set; }
-    bool IsChangePasswordActive { get; set; }
+    string _uri = string.Empty;
 
     // Check the current URL to determine which link is active
     protected override void OnInitialized()
     {
-        var uri = new Uri(NavigationManager.Uri);
-        var segment = uri.Segments.LastOrDefault()?.Trim('/');
-
-        IsBasicInfoActive = segment == "BasicInfo";
-        IsChangePasswordActive = segment == "ChangePassword";
+        _uri = NavigationManager.Uri;
     }
 }
