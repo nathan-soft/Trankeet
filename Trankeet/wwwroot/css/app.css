@@ -149,3 +149,7 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+.table{
+    color: var(--text-color);
+}
