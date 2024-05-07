@@ -1,0 +1,10 @@
+﻿.support-ticket-wrapper {
+    width: 39.375rem;
+}
+
+
+@media screen and (max-width: 640px) {
+    .support-ticket-wrapper {
+        width: 100%;
+    }
+}

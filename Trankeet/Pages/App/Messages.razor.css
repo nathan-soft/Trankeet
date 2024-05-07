@@ -1,4 +1,4 @@
-﻿.font-small {
+﻿.text-small {
     font-size: 0.875rem;
 }
 .chat {
@@ -6,15 +6,26 @@
 }
 
 .img-fluid.rounded-circle {
-    width: 3.125rem !important;
+    width: 3.125rem;
     height: 3.125rem;
     object-fit: cover;
 }
 
-p.font-small.span {
+p.text-small.span {
     line-height: 1.5em;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.inner-chat-img {
+    width: 1.875rem;
+    height: 1.875rem;
+    object-fit: cover;
+}
+
+.send-message {
+    width: 2.5rem;
+    height: 2.5rem;
 }
