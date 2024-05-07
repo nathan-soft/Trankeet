@@ -1,0 +1,14 @@
+﻿.font-small {
+    font-size: 0.875rem;
+}
+.chat {
+    width: 25rem;
+}
+
+p.font-small.span {
+    line-height: 1.5em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

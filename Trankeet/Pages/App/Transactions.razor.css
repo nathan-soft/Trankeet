@@ -1,0 +1,25 @@
+﻿.transaction-wrapper{
+    width: 37rem;
+}
+
+.transaction-description {
+    line-height: 1.5em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.font-small{
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 576px) {
+    .transaction-wrapper {
+        width: 100%;
+    }
+
+    .transaction-description {
+        -webkit-line-clamp: 3;
+    }
+}
