@@ -1,0 +1,14 @@
+﻿.basic-info-wrapper {
+    width: 28.125rem;
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+
+@media screen and (max-width: 450px) {
+    .basic-info-wrapper {
+        width: 100%;
+    }
+}
