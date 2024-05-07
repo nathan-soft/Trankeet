@@ -10,20 +10,22 @@
 
 <section class="bg-white p-4 rounded-3 mt-4 basic-info-wrapper">
     <div class="d-flex flex-column gap-1 border-bottom pb-3">
-        <h5 class="fw-semiboldb mb-0">Profile Information</h5>
+        <h5 class="mb-0">Profile Information</h5>
         <p class="mb-0 text-small">
             Update your profile and how people can contact you generally.
         </p>
     </div>
     <form method="post" asp-page-handler="UpdateNumber" class="d-flex flex-column gap-2">
         <div class="text-danger" asp-validation-summary="ModelOnly"></div>
-        <div>
-            <label for="firstName" class="form-label mb-1">First Name</label>
-            <input type="text" placeholder="reliance" class="form-control" id="firstName">
-        </div>
-        <div>
-            <label for="lastName" class="form-label mb-1">Last Name</label>
-            <input type="text" placeholder="omomowo" class="form-control" id="lastName">
+        <div class="d-flex flex-column flex-sm-row gap-3">
+            <div>
+                <label for="firstName" class="form-label mb-1">First Name</label>
+                <input type="text" placeholder="reliance" class="form-control" id="firstName">
+            </div>
+            <div>
+                <label for="lastName" class="form-label mb-1">Last Name</label>
+                <input type="text" placeholder="omomowo" class="form-control" id="lastName">
+            </div>
         </div>
         <div>
             <label for="email" class="form-label mb-1">Email</label>

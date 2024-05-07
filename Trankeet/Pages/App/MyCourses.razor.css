@@ -1,0 +1,33 @@
+﻿.my-course-card{
+    width: 14.375rem
+}
+
+.my-course-img {
+    width: 100%;
+    height: 9.6875rem;
+    object-fit: cover;
+}
+
+.more-icon{
+    top: 8px;
+    right: 8px;
+}
+
+.font-small{
+    font-size: 0.75rem;
+}
+
+.font-medium{
+    font-size: 0.875rem
+}
+
+div.progress {
+    height: 0.3rem
+}
+
+
+@media screen and (max-width: 1011px) {
+    .my-course-wrapper {
+        justify-content: center;
+    }
+}

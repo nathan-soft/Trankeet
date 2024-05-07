@@ -1,9 +1,82 @@
 ﻿@page "/App/Notifications"
+@using Humanizer
 
 <PageTitle>Notifications</PageTitle>
 <SectionContent SectionName="layout-page-title">
     Notifications
 </SectionContent>
+
+<section class="d-flex flex-column gap-3 notification-wrapper">
+    <div class="card border-0 rounded-3">
+        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex gap-2">
+                <img class="img-fluid rounded-circle" src="./images/Mentor 2.jpg" />
+                <div class="d-flex flex-column">
+                    <p class="mb-0 message fw-light">
+                        Your Loan of N500,000.00 for Marketing has been
+                        approved
+                    </p>
+                    <small class="font-small">@DateTime.UtcNow.Humanize()</small>
+                </div>
+            </div>
+            
+            <i class="bi bi-circle-fill text-primary notify-icon"></i>
+            
+        </div>
+    </div>
+    <div class="card border-0 rounded-3">
+        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex gap-2">
+                <img class="img-fluid rounded-circle" src="./images/Mentor 1.jpg" />
+                <div class="d-flex flex-column">
+                    <p class="mb-0 message fw-light">
+                        Your Loan of N500,000.00 for Marketing has been
+                        approved
+                    </p>
+                    <small class="font-small">@DateTime.UtcNow.Humanize()</small>
+                </div>
+            </div>
+
+            <i class="bi bi-circle-fill text-primary notify-icon"></i>
+
+        </div>
+    </div>
+    <div class="card border-0 rounded-3">
+        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex gap-2">
+                <img class="img-fluid rounded-circle" src="./images/Mentor 3.png" />
+                <div class="d-flex flex-column">
+                    <p class="mb-0 message fw-light">
+                        Your Loan of N500,000.00 for Marketing has been
+                        approved
+                    </p>
+                    <small class="font-small">@DateTime.UtcNow.Humanize()</small>
+                </div>
+            </div>
+
+            <i class="bi bi-circle-fill text-primary notify-icon"></i>
+
+        </div>
+    </div>
+    <div class="card border-0 rounded-3">
+        <div class="card-body p-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex gap-2">
+                <img class="img-fluid rounded-circle" src="./images/Mentor 1.jpg" />
+                <div class="d-flex flex-column">
+                    <p class="mb-0 message fw-light">
+                        Your Loan of N500,000.00 for Marketing has been
+                        approved
+                    </p>
+                    <small class="font-small">@DateTime.UtcNow.Humanize()</small>
+                </div>
+            </div>
+
+            <i class="bi bi-circle-fill text-primary notify-icon"></i>
+
+        </div>
+    </div>
+</section>
+
 
 @code {
 
