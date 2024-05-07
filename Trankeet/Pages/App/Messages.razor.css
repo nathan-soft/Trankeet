@@ -5,6 +5,12 @@
     width: 25rem;
 }
 
+.img-fluid.rounded-circle {
+    width: 3.125rem !important;
+    height: 3.125rem;
+    object-fit: cover;
+}
+
 p.font-small.span {
     line-height: 1.5em;
     display: -webkit-box;
