@@ -15,7 +15,7 @@
             <p class="mb-0">Everything you need to know about the product and billing.</p>
         </div>
 
-        <div class="d-flex flex-column gap-4 px-0">
+        <div class="d-flex flex-column gap-3 px-0">
             @foreach (var faq in faqs)
             {
                 <Accordion Faq="faq" MarkOthersButThisAsInActive="MarkOthersButThisAsInActive" @key="faq" Index="@faqs.IndexOf(faq)" />
@@ -48,7 +48,7 @@
 else {
     <section class="d-flex flex-column gap-3">
         <div class="d-flex align-items-center justify-content-between">
-            <p @onclick="ToggleTicketSection" class="back-button d-flex gap-1 align-items-center fw-semibold">
+            <p @onclick="ToggleTicketSection" class="back-button mb-0 d-flex gap-1 align-items-center fw-semibold">
                 <i class="bi bi-arrow-left fs-5"></i>
                 <span>Back</span>
             </p>
