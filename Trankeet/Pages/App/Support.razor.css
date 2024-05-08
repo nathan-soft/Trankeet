@@ -1,10 +1,29 @@
 ﻿.support-ticket-wrapper {
-    width: 39.375rem;
+    width: 40rem;
+    margin: 0 auto;
+}
+
+.cta {
+    background-color: #fafafa;
+}
+
+.back-button {
+    cursor: pointer;
+}
+
+.date{
+    font-size: 0.75rem;
+}
+
+.ticket-id{
+    font-size: 0.8125rem;
+    font-weight: 500;
 }
 
 
 @media screen and (max-width: 640px) {
     .support-ticket-wrapper {
         width: 100%;
+        margin: 0;
     }
 }
