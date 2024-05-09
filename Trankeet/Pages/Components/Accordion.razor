@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Components
+@using System.Collections.Generic
+
+
+
+@if (Faq != null)
+{
+    <div style="cursor:pointer;" class="d-flex justify-content-between gap-3 pb-2 border-bottom align-items-start accordion" @onclick="HandleClick">
+        <div class="d-flex flex-column gap-3">
+            <h6 class="mb-0 fw-bold">@Faq.Question</h6>
+            <div class="collapse @(Faq.IsActive ? "show" :"")">
+                <div>@Faq.Answer</div>
+            </div>
+        </div>
+        <img src="@IconSource" alt="@IconAltText" />
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Faq Faq { get; set; }
+
+    [Parameter]
+    public int Index { get; set; }
+
+    [Parameter]
+    public EventCallback<Faq> MarkOthersButThisAsInActive { get; set; }
+
+    private string IconSource => Faq.IsActive ? "./images/Icon wrap.svg" : "./images/Icon wrap2.svg";
+    private string IconAltText => Faq.IsActive ? "Minimize icon" : "Expand icon";
+
+    private void HandleClick()
+    {
+        if (Faq.IsActive == false)
+        {
+            //make it active;
+            Faq.IsActive = !Faq.IsActive;
+            //Make the others false...
+            MarkOthersButThisAsInActive.InvokeAsync(Faq);
+        }
+       
+    }
+}

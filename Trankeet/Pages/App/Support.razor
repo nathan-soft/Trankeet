@@ -1,64 +1,170 @@
 ﻿@page "/App/Support"
+@using TrankeetWeb.Pages.Components;
+@using Humanizer;
 
 <PageTitle>Support</PageTitle>
 <SectionContent SectionName="layout-page-title">
     Support
 </SectionContent>
 
+@if (!showTicketSection)
+{
+    <section class="support-ticket-wrapper d-flex flex-column gap-5 bg-white rounded-4 p-5">
+        <div class="px-0 text-center">
+            <h5>Frequently Asked Questions</h5>
+            <p class="mb-0">Everything you need to know about the product and billing.</p>
+        </div>
+
+        <div class="d-flex flex-column gap-3 px-0">
+            @foreach (var faq in faqs)
+            {
+                <Accordion Faq="faq" MarkOthersButThisAsInActive="MarkOthersButThisAsInActive" @key="faq" Index="@faqs.IndexOf(faq)" />
+            }
+        </div>
+
+        <div class="d-flex flex-column align-items-center gap-3 cta py-5 rounded-4">
+            <div class="text-center">
+                <h5 class="fw-semibold">Still have questions?</h5>
+                <p class="mb-0 px-3 px-md-0  mx-md-auto col-md-11 col-lg-10">Can't find the answers you're looking for? Please contact our friendly support team.</p>
+            </div>
+            <div>
+                <button @onclick="ToggleTicketSection" class="d-flex align-items-center gap-1 btn btn-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8_8743)">
+                            <path d="M11 20C11 20.2652 11.1054 20.5196 11.2929 20.7071C11.4804 20.8946 11.7348 21 12 21C12.2652 21 12.5196 20.8946 12.7071 20.7071C12.8946 20.5196 13 20.2652 13 20V13H20C20.2652 13 20.5196 12.8946 20.7071 12.7071C20.8946 12.5196 21 12.2652 21 12C21 11.7348 20.8946 11.4804 20.7071 11.2929C20.5196 11.1054 20.2652 11 20 11H13V4C13 3.73478 12.8946 3.48043 12.7071 3.29289C12.5196 3.10536 12.2652 3 12 3C11.7348 3 11.4804 3.10536 11.2929 3.29289C11.1054 3.48043 11 3.73478 11 4V11H4C3.73478 11 3.48043 11.1054 3.29289 11.2929C3.10536 11.4804 3 11.7348 3 12C3 12.2652 3.10536 12.5196 3.29289 12.7071C3.48043 12.8946 3.73478 13 4 13H11V20Z" fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8_8743">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Create Ticket</span>
+                </button>
+            </div>
+        </div>
+    </section>
+}
+else {
+    <section class="d-flex flex-column gap-3">
+        <div class="d-flex align-items-center justify-content-between">
+            <p @onclick="ToggleTicketSection" class="back-button mb-0 d-flex gap-1 align-items-center fw-semibold">
+                <i class="bi bi-arrow-left fs-5"></i>
+                <span>Back</span>
+            </p>
+            <button class="d-flex align-items-center gap-1 btn btn-primary">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_8_8743)">
+                        <path d="M11 20C11 20.2652 11.1054 20.5196 11.2929 20.7071C11.4804 20.8946 11.7348 21 12 21C12.2652 21 12.5196 20.8946 12.7071 20.7071C12.8946 20.5196 13 20.2652 13 20V13H20C20.2652 13 20.5196 12.8946 20.7071 12.7071C20.8946 12.5196 21 12.2652 21 12C21 11.7348 20.8946 11.4804 20.7071 11.2929C20.5196 11.1054 20.2652 11 20 11H13V4C13 3.73478 12.8946 3.48043 12.7071 3.29289C12.5196 3.10536 12.2652 3 12 3C11.7348 3 11.4804 3.10536 11.2929 3.29289C11.1054 3.48043 11 3.73478 11 4V11H4C3.73478 11 3.48043 11.1054 3.29289 11.2929C3.10536 11.4804 3 11.7348 3 12C3 12.2652 3.10536 12.5196 3.29289 12.7071C3.48043 12.8946 3.73478 13 4 13H11V20Z" fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_8_8743">
+                            <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span>Create Ticket</span>
+            </button>
+        </div>
+
+        <div class="d-flex flex-column gap-2 support-ticket-wrapper">
+            <div class="card border-0">
+                <div class="card-body d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="mb-0 ticket-id">Ticket#2020-3454</p>
+                        <p class="fw-bold mb-0 date">@DateTime.UtcNow.AddHours(-3).Humanize()</p>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <h5 class="mb-0">
+                            Cannot Access The System
+                        </h5>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Accusamus illum optio quisquam sit et error eius, quia iusto at natus.
+                        </p>
+                        <p class="mb-0 mt-1">
+                            <span class="badge fw-bold text-danger bg-danger bg-opacity-25">Urgent</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0">
+                <div class="card-body d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="mb-0 ticket-id">Ticket#2020-3454</p>
+                        <p class="fw-bold mb-0 date">@DateTime.UtcNow.ToString("MMM dd")</p>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <h5 class="mb-0">
+                            Cannot Access The System
+                        </h5>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Accusamus illum optio quisquam sit et error eius, quia iusto at natus.
+                        </p>
+                        <p class="mb-0 mt-1">
+                            <span class="badge fw-bold text-success bg-success bg-opacity-25">Low</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0">
+                <div class="card-body d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="mb-0 ticket-id">Ticket#2020-3454</p>
+                        <p class="fw-bold mb-0 date">@DateTime.UtcNow.AddDays(-3).Humanize()</p>
+                    </div>
+                    <div class="d-flex flex-column gap-1">
+                        <h5 class="mb-0">
+                            Cannot Access The System
+                        </h5>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Accusamus illum optio quisquam sit et error eius, quia iusto at natus.
+                        </p>
+                        <p class="mb-0 mt-1">
+                            <span class="badge fw-bold text-warning bg-warning bg-opacity-25">Medium</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+}
 
 
-<section class="d-flex flex-column gap-4 bg-white pt-4 pb-5 rounded-4 support-ticket-wrapper">
-    <div class="d-flex align-items-center justify-content-between px-4">
-        <h5 class="mb-0 fw-semibold">Support Ticket</h5>
-        <button class="d-flex align-items-center gap-1 btn btn-primary">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_8_8743)">
-                    <path d="M11 20C11 20.2652 11.1054 20.5196 11.2929 20.7071C11.4804 20.8946 11.7348 21 12 21C12.2652 21 12.5196 20.8946 12.7071 20.7071C12.8946 20.5196 13 20.2652 13 20V13H20C20.2652 13 20.5196 12.8946 20.7071 12.7071C20.8946 12.5196 21 12.2652 21 12C21 11.7348 20.8946 11.4804 20.7071 11.2929C20.5196 11.1054 20.2652 11 20 11H13V4C13 3.73478 12.8946 3.48043 12.7071 3.29289C12.5196 3.10536 12.2652 3 12 3C11.7348 3 11.4804 3.10536 11.2929 3.29289C11.1054 3.48043 11 3.73478 11 4V11H4C3.73478 11 3.48043 11.1054 3.29289 11.2929C3.10536 11.4804 3 11.7348 3 12C3 12.2652 3.10536 12.5196 3.29289 12.7071C3.48043 12.8946 3.73478 13 4 13H11V20Z" fill="white" />
-                </g>
-                <defs>
-                    <clipPath id="clip0_8_8743">
-                        <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
-            <span>Create Ticket</span>
-        </button>
-    </div>
-    <div class="table-responsive">
-        <table class="table">
-            <tbody class="">
-                <tr class="">
-                    <td class="ps-4 py-3">SR#136354726</td>
-                    <td class="py-3 text-nowrap">Refund Request</td>
-                    <td class="py-3">07/07/2024</td>
-                    <td class="pe-4 py-3">
-                        <span class="badge fw-bold text-bg-warning">Pending</span>
-
-                    </td>
-                </tr>
-                <tr class="">
-                    <td class="ps-4 py-3">SR#136354726</td>
-                    <td class="py-3 text-nowrap">Refund Request</td>
-                    <td class="py-3">07/07/2024</td>
-                    <td class="pe-4 py-3">
-                        <span class="badge fw-bold text-bg-success">Completed</span>
-
-                    </td>
-                </tr>
-                <tr class="">
-                    <td class="ps-4 py-3">SR#136354726</td>
-                    <td class="py-3 text-nowrap">Refund Request</td>
-                    <td class="py-3">07/07/2024</td>
-                    <td class="pe-4 py-3">
-                        <span class="badge fw-bold text-bg-danger">Closed</span>
-
-                    </td>
-                </tr>
-            </tbody>        
-        </table>
-    </div>
-</section>
 
 @code {
+    bool showTicketSection;
+    List<Faq> faqs = new();
 
+    protected override void OnInitialized()
+    {
+        showTicketSection = false;
+        faqs = new List<Faq>
+        {
+            new Faq("Is there a free trial available?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.", true),
+            new Faq("Can I change my plan later?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."),
+            new Faq("What is your cancellation policy?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."),
+            new Faq("'Can other info be added to an invoice?'", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."),
+            new Faq("How does billing work?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."),
+        };
+    }
+
+    void MarkOthersButThisAsInActive(Faq currentFaq)
+    {
+        faqs.ForEach(f =>
+        {
+            if (f != currentFaq)
+            {
+                f.IsActive = false;
+            }
+        });
+    }
+
+    void ToggleTicketSection()
+    {
+        showTicketSection = !showTicketSection;
+    }
 }
