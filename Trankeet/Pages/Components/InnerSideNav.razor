@@ -1,4 +1,7 @@
-﻿<aside class="side-nav shadow">
+﻿@using TrankeetWeb.Data
+@inject NavigationManager NavigationManager;
+
+<aside class="side-nav shadow">
     <a href="javascript:void(0)" class="closebtn">×</a>
     <h5 class="mb-0 pb-4 border-bottom text-center">
         <img src="/images/logo.svg" class="img-fluid"
@@ -12,34 +15,39 @@
         </button> *@
 
         <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-                <NavLink class="nav-link text-dark" href="/App/Dashboard">Dashboard</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link text-dark" href="/App/MyCourses">My Courses</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link text-dark" href="/App/Mentorships">Mentorships</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link text-dark" href="/App/Messages">Messages</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link text-dark" href="/App/Transactions">Transactions</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link text-dark" href="/App/Notifications">Notifications</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link text-dark" href="/App/Support">Support</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink class="nav-link text-dark" href="/App/Settings/BasicInfo">Settings</NavLink>
-            </li>
+            @foreach (var navItem in InnerSideMenuNavLinks.GetNavItems())
+            {
+                <li class="nav-item @(_currentPagePath.Contains(navItem.GetUrlPathWithoutLeadingSlash()) ? "active" : "")"
+                  @onclick="() => {SetCurrentPagePath(navItem.GetUrlPathWithoutLeadingSlash());}"
+                 >
+                    <NavLink class="nav-link text-dark" href="@navItem.UrlPath">@navItem.Title</NavLink>
+                </li>
+            }
         </ul>
     </nav>
 </aside>
 
 @code {
+    string _currentPagePath = string.Empty;
 
+    protected override void OnInitialized()
+    {
+        SetCurrentPagePath(GetCurrentPagePath());
+        base.OnInitialized();
+    }
+
+    /// <summary>
+    ///  Sets the "_currentPagePath" private which is in turn used to determine which link should be marked as active with css styling.
+    /// </summary>
+    void SetCurrentPagePath(string currUrlPath)
+    {
+        _currentPagePath = currUrlPath;
+    }
+
+    string GetCurrentPagePath()
+    {
+        return NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+    }
+
+    
 }
