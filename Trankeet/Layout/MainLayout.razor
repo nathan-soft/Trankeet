@@ -14,6 +14,7 @@
 </HeadContent>
 
 <InnerSideNav />
+
 <div class="main-wrapper">
         <nav class="top-nav py-3 d-flex bg-white justify-content-between align-items-center shadow-sm sticky-top">
             <section class="d-flex gap-2">
@@ -67,10 +68,4 @@
 
 
 @code{
-    public string Title = "";
-    
-    private async Task GetTitle()
-    {
-        Title = await jsRuntime.InvokeAsync<string>("getTitle");
-    }
 }
