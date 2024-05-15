@@ -1,16 +1,302 @@
-﻿<HeadContent>
+﻿@page "/"
+@page "/Public/"
+@using TrankeetWeb.Pages.Components
+
+<PageTitle> Welcome Page</PageTitle>
+
+<HeadContent>
     <style>
         body {
             background-color: white;
             background-image: none;
         }
+
+        main {
+            display: block !important;
+            justify-content: start !important;
+            align-items: start !important;
+            padding-top: 3.5rem !important;
+            padding-bottom: 0 !important;
+        }
     </style>
 </HeadContent>
 
-<section class="header">
 
+<section class="hero">
+    <div class="d-flex flex-column justify-content-center align-items-center overlay h-100 w-100">
+        <div class="d-flex flex-column gap-2 text-white text-center">
+            <h2 class="mb-0 fw-semibold">Welcome To Trankeet</h2>
+            <p class="mb-0 col-lg-8 mx-auto hero-text fw-light">
+                Home for basic learning opportunities for young africans aged 13-22
+                in leadership, digital skills, and STEM courses.
+            </p>
+        </div>
+    </div>
 </section>
 
-@code {
+<section class="container d-flex flex-column gap-2 pt-5 pb-4">
+    <div class="d-flex align-items-center justify-content-between">
+        <h4 class="mb-0 fw-semibold">Top Courses</h4>
+        <NavLink class="btn text-decoration-none btn-link text-dark btn-sm" href="/Public/Courses">View More</NavLink>
+    </div>
+    <div class="d-flex flex-wrapper flex-nowrap gap-3 overflow-x-scroll">
 
+        <div class="d-flex flex-column gap-3 course-card">
+            <div class="d-flex flex-column gap-2">
+                <img class="course-img img-fluid rounded-4" src="/images/background.jpg" />
+                <div class="d-flex flex-column gap-1">
+                    <h6 class="fw-semibold mb-0">AI Fundamentals</h6>
+                    <p class="course-description mb-0">Morem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-outline-primary">Learn More</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column gap-3 course-card">
+            <div class="d-flex flex-column gap-2">
+                <img class="course-img img-fluid rounded-4" src="/images/background.jpg" />
+                <div class="d-flex flex-column gap-1">
+                    <h6 class="fw-semibold mb-0">AI Fundamentals</h6>
+                    <p class="course-description mb-0">Morem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-outline-primary">Learn More</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column gap-3 course-card">
+            <div class="d-flex flex-column gap-2">
+                <img class="course-img img-fluid rounded-4" src="/images/background.jpg" />
+                <div class="d-flex flex-column gap-1">
+                    <h6 class="fw-semibold mb-0">AI Fundamentals</h6>
+                    <p class="course-description mb-0">Morem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-outline-primary">Learn More</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column gap-3 course-card">
+            <div class="d-flex flex-column gap-2">
+                <img class="course-img img-fluid rounded-4" src="/images/background.jpg" />
+                <div class="d-flex flex-column gap-1">
+                    <h6 class="fw-semibold mb-0">AI Fundamentals</h6>
+                    <p class="course-description mb-0">Morem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-outline-primary">Learn More</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column gap-3 course-card">
+            <div class="d-flex flex-column gap-2">
+                <img class="course-img img-fluid rounded-4" src="/images/background.jpg" />
+                <div class="d-flex flex-column gap-1">
+                    <h6 class="fw-semibold mb-0">AI Fundamentals</h6>
+                    <p class="course-description mb-0">Morem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-outline-primary">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container d-flex flex-column gap-2 py-4">
+    <div class="d-flex align-items-center justify-content-between">
+        <h4 class="mb-0 fw-semibold">Top Mentors</h4>
+        <NavLink class="btn text-decoration-none btn-link text-dark btn-sm" href="/Public/Mentors">View More</NavLink>
+    </div>
+    <div class="d-flex flex-wrapper flex-nowrap gap-3 overflow-x-scroll">
+        <div class="d-flex flex-column justify-content-end mentor-card-1">
+            <div class="d-flex flex-column gap-1 text-white px-4 pb-3">
+                <div>
+                    <h5 class="mb-0 fw-light">Nathan Recees</h5>
+                    <p class="mb-0 font-small fw-bold">Software Developer</p>
+                </div>
+
+                <div class="row row-gap-1">
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Interface</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Exprience</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Wireframing</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Interaction Design</span>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="d-flex flex-column justify-content-end mentor-card-2">
+            <div class="d-flex flex-column gap-1 text-white px-4 pb-3">
+                <div>
+                    <h5 class="mb-0 fw-light">Sarah Gideon</h5>
+                    <p class="mb-0 font-small fw-bold">UX Designer</p>
+                </div>
+
+                <div class="row row-gap-1">
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Interface</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Exprience</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Wireframing</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Interaction Design</span>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="d-flex flex-column justify-content-end mentor-card-3">
+            <div class="d-flex flex-column gap-1 text-white px-4 pb-3">
+                <div>
+                    <h5 class="mb-0 fw-light">Dorcas Polet</h5>
+                    <p class="mb-0 font-small fw-bold">Data Analyst</p>
+                </div>
+
+                <div class="row row-gap-1">
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Interface</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Exprience</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Wireframing</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Interaction Design</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex flex-column justify-content-end mentor-card-4">
+            <div class="d-flex flex-column gap-1 text-white px-4 pb-3">
+                <div>
+                    <h5 class="mb-0 fw-light">Symeon Omomowo</h5>
+                    <p class="mb-0 font-small fw-bold">Database Administrator</p>
+                </div>
+
+                <div class="row row-gap-1">
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Interface</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Exprience</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Wireframing</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Interaction Design</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex flex-column justify-content-end mentor-card-5">
+            <div class="d-flex flex-column gap-1 text-white px-4 pb-3">
+                <div>
+                    <h5 class="mb-0 fw-light">Tayo Akinkumi</h5>
+                    <p class="mb-0 font-small fw-bold">Data Scientist</p>
+                </div>
+
+                <div class="row row-gap-1">
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Interface</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">User Exprience</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Wireframing</span>
+                    </div>
+                    <div class="col-auto px-1">
+                        <span class="btn mentor-experties">Interaction Design</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="d-flex justify-content-center p-5 py-4">
+    <div class="faq d-flex flex-column gap-4 bg-white rounded-4 p-5">
+        <h5 class="mb-0 text-center">Frequently Asked Questions</h5>
+
+        <div class="d-flex flex-column gap-3 px-0">
+            @foreach (var faq in faqs)
+            {
+                <Accordion Faq="faq" MarkOthersButThisAsInActive="MarkOthersButThisAsInActive" @key="faq" Index="@faqs.IndexOf(faq)" />
+            }
+        </div>
+
+        <div style="background-color: #fafafa;" class="d-flex flex-column align-items-center gap-3 cta py-5 rounded-4">
+            <div class="text-center">
+                <h5 class="fw-semibold">Still have questions?</h5>
+                <p class="mb-0 px-3 px-md-0  mx-md-auto col-md-11 col-lg-10">Can't find the answers you're looking for? Please contact our friendly support team.</p>
+            </div>
+            <div>
+                <button class="d-flex align-items-center gap-1 btn btn-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8_8743)">
+                            <path d="M11 20C11 20.2652 11.1054 20.5196 11.2929 20.7071C11.4804 20.8946 11.7348 21 12 21C12.2652 21 12.5196 20.8946 12.7071 20.7071C12.8946 20.5196 13 20.2652 13 20V13H20C20.2652 13 20.5196 12.8946 20.7071 12.7071C20.8946 12.5196 21 12.2652 21 12C21 11.7348 20.8946 11.4804 20.7071 11.2929C20.5196 11.1054 20.2652 11 20 11H13V4C13 3.73478 12.8946 3.48043 12.7071 3.29289C12.5196 3.10536 12.2652 3 12 3C11.7348 3 11.4804 3.10536 11.2929 3.29289C11.1054 3.48043 11 3.73478 11 4V11H4C3.73478 11 3.48043 11.1054 3.29289 11.2929C3.10536 11.4804 3 11.7348 3 12C3 12.2652 3.10536 12.5196 3.29289 12.7071C3.48043 12.8946 3.73478 13 4 13H11V20Z" fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8_8743">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Create Ticket</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="d-flex justify-content-center py-4 font-small text-white">
+    © Copyright Trankeet 2024
+</footer>
+
+
+
+@code {
+    List<Faq> faqs = new();
+
+    protected override void OnInitialized()
+    {
+        faqs = new List<Faq>
+        {
+            new Faq("Is there a free trial available?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.", true),
+            new Faq("Can I change my plan later?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."),
+            new Faq("What is your cancellation policy?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."),
+            new Faq("'Can other info be added to an invoice?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."),
+            new Faq("How does billing work?", "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible."),
+        };
+    }
+
+    void MarkOthersButThisAsInActive(Faq currentFaq)
+    {
+        faqs.ForEach(f =>
+        {
+            if (f != currentFaq)
+            {
+                f.IsActive = false;
+            }
+        });
+    }
 }

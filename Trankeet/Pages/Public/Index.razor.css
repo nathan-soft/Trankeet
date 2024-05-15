@@ -1,0 +1,116 @@
+﻿.font-small {
+    font-size: 0.8125rem;
+}
+
+.text-dark {
+    color: var(--text-color);
+}
+
+.hero {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 30rem;
+    width: 100%;
+}
+
+.overlay {
+    background-color: #16161680;
+}
+
+.hero-text,
+.course-description {
+    line-height: 1.3;
+}
+
+.flex-wrapper{
+    width: 
+}
+
+.flex-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.course-card {
+    width: 18.75rem;
+    flex-shrink: 0;
+}
+
+.course-img {
+    width: 100%;
+    height: 9.6875rem;
+    object-fit: cover;
+}
+
+.mentor-card-1 {
+    background-image: url('images/Mentor 1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.9rem;
+    height: 21.25rem;
+    width: 18.75rem;
+    flex-shrink: 0;
+}
+
+.mentor-card-2 {
+    background-image: url('images/Mentor 2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.9rem;
+    height: 21.25rem;
+    width: 18.75rem;
+    flex-shrink: 0;
+}
+
+.mentor-card-3 {
+    background-image: url('images/Mentor 3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.9rem;
+    height: 21.25rem;
+    width: 18.75rem;
+    flex-shrink: 0;
+}
+
+.mentor-card-4 {
+    background-image: url('images/background_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.9rem;
+    height: 21.25rem;
+    width: 18.75rem;
+    flex-shrink: 0;
+}
+
+.mentor-card-5 {
+    background-image: url('images/Mentor 1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.9rem;
+    height: 21.25rem;
+    width: 18.75rem;
+    flex-shrink: 0;
+}
+
+span.mentor-experties {
+    border: 1px solid #ffffff;
+    border-radius: 1.5rem;
+    padding: .35rem 1rem;
+    font-size: .7rem;
+    color: #ffffff;
+    line-height: .7rem;
+}
+
+.faq {
+    width: 40rem;
+}
+
+footer {
+    background-color: var(--text-color);
+}
