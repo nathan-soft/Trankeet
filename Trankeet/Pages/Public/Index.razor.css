@@ -43,8 +43,7 @@
     object-fit: cover;
 }
 
-.mentor-card-1 {
-    background-image: url('images/Mentor 1.jpg');
+.mentors-card {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -52,50 +51,26 @@
     height: 21.25rem;
     width: 18.75rem;
     flex-shrink: 0;
+}
+
+.mentor-card-1 {
+    background-image: url('images/Mentor 1.jpg');
 }
 
 .mentor-card-2 {
     background-image: url('images/Mentor 2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 1.9rem;
-    height: 21.25rem;
-    width: 18.75rem;
-    flex-shrink: 0;
 }
 
 .mentor-card-3 {
     background-image: url('images/Mentor 3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 1.9rem;
-    height: 21.25rem;
-    width: 18.75rem;
-    flex-shrink: 0;
 }
 
 .mentor-card-4 {
-    background-image: url('images/background_2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 1.9rem;
-    height: 21.25rem;
-    width: 18.75rem;
-    flex-shrink: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url('images/background_2.jpg');
 }
 
 .mentor-card-5 {
     background-image: url('images/Mentor 1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 1.9rem;
-    height: 21.25rem;
-    width: 18.75rem;
-    flex-shrink: 0;
 }
 
 span.mentor-experties {
@@ -108,9 +83,31 @@ span.mentor-experties {
 }
 
 .faq {
-    width: 40rem;
+    width: 35rem;
 }
 
 footer {
     background-color: var(--text-color);
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding-right: 0;
+        padding-left: 1.5rem;
+    }
+    
+    .course-card {
+        width: 14.5rem;
+    }
+
+    .mentors-card {
+        width: 16rem !important;
+        border-radius:  1.3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container .justify-content-between {
+        padding-right: 1.5rem;
+    }
 }
