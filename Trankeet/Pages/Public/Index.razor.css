@@ -48,9 +48,13 @@
     background-size: cover;
     background-position: center;
     border-radius: 1.9rem;
-    height: 21.25rem;
-    width: 18.75rem;
+    height: 19.25rem;
+    width: 15.75rem;
     flex-shrink: 0;
+}
+
+.mentor-info {
+    background-color: #00000033;
 }
 
 .mentor-card-1 {
@@ -66,7 +70,7 @@
 }
 
 .mentor-card-4 {
-    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url('images/background_2.jpg');
+    background-image: url('images/background_2.jpg');
 }
 
 .mentor-card-5 {
