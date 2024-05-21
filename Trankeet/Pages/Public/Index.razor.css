@@ -239,10 +239,14 @@ span.mentor-experties.last::after{
             gap: 1.3rem !important;
             align-items: center;
         }
+
         .testimonial-heading {
-            flex-direction: row !important;
-            gap: 0.5rem;
-            align-items: center;
+            display: none !important;
+        }
+
+        .testimonial-heading-2 {
+            text-align: center;
+            display: block !important;
         }
     }
 
@@ -343,12 +347,31 @@ span.mentor-experties.last::after{
     }
 
     @media screen and (max-width: 576px) {
-        .cta-section,
         .faq {
             width: 100%;
+            padding-inline: 1.5rem;
+        }
+
+        .cta-section {
+            width: 95%;
         }
 
         .testimonial-card{
             flex-shrink: 1;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .rectangle-depth{
+            width: 17rem;
+            height: 12rem;
+        }
+
+        .mentors{
+            top: -14rem;
+        }
+
+        .course-section{
+            padding-bottom: 17rem;
         }
     }
