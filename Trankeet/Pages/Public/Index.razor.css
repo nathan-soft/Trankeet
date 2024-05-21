@@ -28,6 +28,10 @@
     display: none;
 }
 
+.course-section {
+    padding-bottom: 17rem;
+}
+
 .course-card {
     width: 22.5rem;
     flex-shrink: 0;
@@ -58,8 +62,27 @@
     right: 0.9375rem;
 }
 
-.mentors-section {
-    padding-bottom: 12rem;
+.rectangle-depth {
+    width: 40rem;
+    height: 20rem;
+    background-color: #222222;
+}
+
+.mentors-section .flex-wrapper {
+    padding-inline-end: 3rem;
+}
+
+.mentors {
+    padding-block: 2rem;
+    padding-inline-start: 3rem;
+    top: -12rem;
+    right: 0;
+    width: 85%;
+    background-color: #4D6BEE;
+}
+
+.mentors-header {
+    padding-right: 3rem;
 }
 
 .mentors-card {
@@ -97,13 +120,13 @@
 }
 
 .skills {
-    height: 2.1875rem;
+    max-height: 4.05rem;
     overflow: hidden;
 }
 
 span.mentor-experties {
     color: #ffffff;
-    font-size: .7rem !important;
+    font-size: .9rem !important;
     font-weight: bold;
     height: fit-content;
 }
@@ -111,6 +134,34 @@ span.mentor-experties {
 .mentor-experties::after{
     content: '.';
     margin: 0 0.2rem;
+}
+
+span.mentor-experties.last::after{
+    content: '';
+    margin: 0;
+}
+
+.testimonial-section {
+    padding: 0 1.5rem 12rem 1.5rem;
+}
+
+.testimonial-wrapper{
+    width: 38.5rem;
+}
+
+.testimonial-card {
+    width: 18.75rem;
+    flex-shrink: 0;
+    background-color: #F6F9FC;
+}
+
+.testimonial-img {
+    background-image: url('images/Mentor 1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .faq-section {
@@ -123,7 +174,7 @@ span.mentor-experties {
 }
 
 .cta-section {
-    margin-top: -11rem;
+    margin-top: -15rem;
     background-color: #F6F9FC;
     width: 60rem;
     height: 17.1875rem;
@@ -141,7 +192,17 @@ span.mentor-experties {
 
 @media screen and (min-width: 1600px) {
     .cta-section {
-        margin-top: -7rem;
+        margin-top: -10rem;
+    }
+
+    .mentors-section {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .mentors {
+        border-bottom-right-radius: 2rem !important;
+        border-top-right-radius: 2rem !important
     }
 }
 
@@ -159,17 +220,43 @@ span.mentor-experties {
 
     @media screen and (max-width: 991px) {
 
-        .mentors-section {
-            padding-bottom: 10rem;
+        .cta-section{
+            margin-top: -17rem;
+        }
+
+        .rectangle-depth{
+            width: 30rem;
         }
 
         .course-card {
-            width: 20.75rem;
+            width: 19rem;
+        }
+    }
+
+    @media screen and (max-width: 940px) {
+        .testimonial-section{
+            flex-direction: column;
+            gap: 1.3rem !important;
+            align-items: center;
+        }
+        .testimonial-heading {
+            flex-direction: row !important;
+            gap: 0.5rem;
+            align-items: center;
         }
     }
 
 
     @media screen and (max-width: 767px) {
+
+        .cta-section{
+            margin-top: -15rem;
+        }
+
+        .mentors{
+            width: 95%;
+        }
+
         .mentors-card {
             width: 16rem !important;
             border-radius: 1.3rem;
@@ -187,10 +274,50 @@ span.mentor-experties {
         }
     }
 
+    @media screen and (max-width: 640px){
+        .rectangle-depth{
+            height: 17rem;
+        }
+
+        .mentors-card {
+            height: 17rem;
+        }
+
+        .testimonial-wrapper{
+            width: 100%;
+            justify-content: center
+        }
+    }
+
     @media screen and (max-width: 600px) {
         .container {
             max-width: 100%;
             padding-left: 1.5rem;
+            padding-right: 0;
+        }
+
+        .course-section {
+            padding-bottom: 15rem;
+        }
+
+        .course-card{
+            width: 22rem;
+        }
+
+        .course-footer{
+            padding-right: 1.5rem;
+        }
+
+        .rectangle-depth{
+            width: 23rem;
+        }
+
+        .testimonial-section{
+            padding-bottom: 10rem;
+        }
+
+        .mentors {
+            padding-left: 2.5rem;
             padding-right: 0;
         }
 
@@ -208,6 +335,10 @@ span.mentor-experties {
         .flex-wrapper {
             padding-right: 1.5rem;
         }
+
+        .mentors-section .flex-wrapper {
+            padding-inline-end: 2.5rem;
+        }
         
     }
 
@@ -215,5 +346,9 @@ span.mentor-experties {
         .cta-section,
         .faq {
             width: 100%;
+        }
+
+        .testimonial-card{
+            flex-shrink: 1;
         }
     }
